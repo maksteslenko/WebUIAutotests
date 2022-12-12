@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>ExampleMain xref</title>
+<link type="text/css" rel="stylesheet" href="../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../apidocs/org/example/lesson3/ExampleMain.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.example.lesson3;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> io.github.bonigarcia.wdm.WebDriverManager;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> org.openqa.selenium.By;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> org.openqa.selenium.WebDriver;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> org.openqa.selenium.WebElement;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> org.openqa.selenium.chrome.ChromeDriver;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> org.openqa.selenium.chrome.ChromeOptions;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="ExampleMain" href="../../../org/example/lesson3/ExampleMain.html#ExampleMain">ExampleMain</a> {
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String[] args) {
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_comment">//        работа с хром драйвером, расположенных на локальной машине в виде exe файла</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_comment">//        System.setProperty("webdriver.chorome.driver", "src/main/resources/chromedriver");</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>          WebDriverManager.chromedriver().setup();
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>          ChromeOptions options = <strong class="jxr_keyword">new</strong> ChromeOptions();
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          options.addArguments(<span class="jxr_string">"--incognito"</span>);
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          <em class="jxr_comment">// запуск браузера в фоне, необходимо проверять в этом режиме перед выкладыванием теста</em>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          <em class="jxr_comment">//options.addArguments("--incognito");</em>
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          options.addArguments(<span class="jxr_string">"start-maximized"</span>);
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          WebDriver driver = <strong class="jxr_keyword">new</strong> ChromeDriver(options);
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          driver.get(<span class="jxr_string">"http://google.com"</span>);
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          WebElement webElement1 = driver.findElement(By.name(<span class="jxr_string">"gLFyf"</span>));
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          driver.close();
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      }
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2022. All rights reserved.</div>
+</body>
+</html>
